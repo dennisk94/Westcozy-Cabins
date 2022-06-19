@@ -1,0 +1,140 @@
+body.archive {
+
+    // header
+    header.woocommerce-products-header {
+        .page-description > p {
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // hide notices
+    div.woocommerce-notices-wrapper {
+        display: none;
+    }
+    
+    // hide result count
+    p.woocommerce-result-count {
+        display: none;
+    }
+    
+    // hide order selection
+    form.woocommerce-ordering {
+        display: none;
+    }
+
+    // cabins and gift certificate
+    ul.products {
+
+        article {
+            margin: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid black;
+    
+            a.cabin-list-product {
+                display: flex;
+                flex-direction: column-reverse;
+                text-decoration: none;
+                color: black;
+    
+                img {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+    
+                h3 {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+    
+            div {
+                h4 {
+                    font-size: 1.5rem;
+                    margin: .5rem 0;
+                }
+    
+                p {
+                    margin-bottom: 0rem;
+                }
+    
+                p.policy {
+                    display: none;
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                ul {
+                    margin-left: 0;
+                }
+    
+                a {
+                    text-decoration: none;
+                    background-color: $color__1;
+                    border: 1px solid $color__1;
+                    border-radius: 15px;
+                    padding: .5rem;
+                    color: black;
+                    transition: .6s;
+                    &:hover{
+                        background-color: $color__2;
+                        color: $color__6;
+                    }
+                }
+            }
+        }
+    }
+    .woocommerce-breadcrumb{
+        display: none;
+    }
+    .page-description{
+        margin: 0 1rem;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+
+        // header
+        header.woocommerce-products-header {
+            .page-description > div {
+                margin-bottom: 2rem;
+            }
+        }
+
+        // cabins and gift certificate
+        ul.products {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-evenly;
+
+            & > li {
+                width: 50%;
+
+                article {
+                    border-top: none;
+                    max-width: none;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    
+                }
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        // cabins and gift certificate
+        ul.products {
+            max-width: 124rem;
+
+            & > li {
+                width: 30%;
+            }
+        }
+    }
+}
+

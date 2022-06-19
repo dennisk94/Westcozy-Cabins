@@ -1,0 +1,12 @@
+body.login {
+    background-color: #CCD5AE;
+}
+
+body.login div#login form#loginform {
+    background-color: #FEFAE0;
+
+}
+
+body.login form{
+    border-radius: 10px;
+}

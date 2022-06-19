@@ -1,0 +1,61 @@
+// Policy Page Styling
+.page-id-32{
+    .policies-wrapper, .contact-info p{
+        margin: 0 1rem;
+        h2, h3{
+            margin-bottom: -10px;
+        }
+        section{
+            margin-bottom: 5rem;
+            div{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    .contact-info{
+        margin: 0 1rem;
+        h3{
+            font-size: 1.6rem;
+        }
+        p{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            h4{
+                text-decoration: none;
+                display: block;
+                color: black;
+                border: 1px solid $color__2;
+                border-radius: 50px;
+                background-color: $color__2;
+                padding: 1rem;
+                margin: 1rem;
+                margin-bottom: 3rem;
+                text-align: center;
+                transition: .5s;
+                max-width: 16rem;
+                margin: 0 auto;
+                &:hover{
+                    background-color: $color__1;
+                    color: $color__6;
+                    transition: linear 0.5s;
+                }
+            }
+        } 
+    }
+}
+@media(min-width: $breakpoint-mobile){
+    .page-id-32{
+        .policies-wrapper, .contact-info{
+            max-width: 40rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    }
+    .contact-info p {
+        display: inline-block;
+        padding: 0 4rem;
+        text-align: initial;
+    }
+}

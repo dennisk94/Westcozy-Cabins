@@ -1,0 +1,144 @@
+.banner-wrapper, .woocommerce-products-header{
+    
+    img{
+        min-height: 600px;
+        height: calc(100vh - 4rem);
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    h1{
+        text-shadow: -1px -1px 0 #000000,
+                     1px -1px 0 #000000,
+                     -1px 1px 0 #000000,
+                     1px 1px 0 #000000;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $color__background-body;
+        font-size: 4rem;
+        z-index: 5;
+    }
+
+    h2{
+        text-shadow: -1px -1px 0 #000000,
+                     1px -1px 0 #000000,
+                     -1px 1px 0 #000000,
+                     1px 1px 0 #000000;
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $color__background-body;
+        z-index: 5;
+        @media(min-width: $breakpoint-tablet){
+            top: 57%;
+        }
+        @media(min-width: $breakpoint-desktop){
+            top: 55%;
+        }
+    }
+
+    // for home-page link
+    #banner-link{
+        position: absolute;
+        background-color: $color__1;
+        border-radius: 50px;
+        padding: 2rem;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color__6;
+        text-decoration: none;
+        font-weight: bolder;
+        transition: .5s;
+        @media(min-width:$breakpoint-tablet){
+            font-size: 1.7rem;
+        }
+        &:hover{
+            background-color: $color__5;
+            color: #1C1C1C;
+            box-shadow: 0px 0px 3px 3px $color__2 ;
+        }
+        z-index: 5;
+    }
+}
+
+//Front page banner h1 styling
+.page-id-22{
+    .banner-wrapper{
+        h1{
+            position: absolute;
+            text-align: center;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: $color__6;
+            font-size: 2.4rem;
+            text-shadow: -1px -1px 0 #FFFFFF,
+                     1px -1px 0 #FFFFFF,
+                     -1px 1px 0 #FFFFFF,
+                     1px 1px 0 #FFFFFF;
+            @media(min-width:$breakpoint-tablet){
+                font-size: 4rem;
+            }
+        }
+        h2{
+            font-size: 1.2rem;
+            @media(min-width:$breakpoint-tablet){
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// Individual Cabin Banner Styling
+.single-product {
+    .cabin-banner{
+        position: relative;
+        height: auto;
+
+        img{
+            min-height: 600px;
+            height: calc(100vh - 4rem);
+            width: 100vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            object-fit: cover;
+        }
+
+        h1{
+            text-shadow: -1px -1px 0 #000000,
+                        1px -1px 0 #000000,
+                        -1px 1px 0 #000000,
+                        1px 1px 0 #000000;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            color: $color__background-body;
+            font-size: 4rem;
+            z-index: 999;
+            @media(min-width: 450px){
+                transform: translate(-50%, 300%); 
+            }
+            @media(min-width: $breakpoint-desktop){
+                transform: translate(-50%, 375%);
+            }
+        }
+    }
+}
+
+.woocommerce-breadcrumb{
+    display: none;
+}

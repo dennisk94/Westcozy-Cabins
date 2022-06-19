@@ -1,0 +1,77 @@
+// Our Story Page Styling
+.page-id-24{
+    .our-story-wrapper{
+        margin: 0 1rem;
+        h2,h3 {
+            text-align: center;
+        }
+        img{
+            margin: 0 auto;
+            float: none;
+            @media(min-width:$breakpoint-tablet){
+                width: 50%;
+            }
+        }
+    }
+    .cabin-link{
+        margin-top: 3rem;
+        a{
+            text-decoration: none;
+            display: block;
+            color: black;
+            border: 1px solid #E9EDC9;
+            border-radius: 50px;
+            background-color: #E9EDC9;
+            padding: 1rem;
+            margin: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            transition: .5s;
+            max-width: 20rem;
+            margin: 0 auto;
+            &:hover{
+                background-color: $color__1;
+                color: $color__6;
+                transition: linear 0.5s;
+            }
+        }
+    }
+}
+
+@media(min-width: $breakpoint-desktop){
+    .page-id-24{
+        .our-story-wrapper{
+            max-width: 60rem;
+            margin: 0 auto;
+
+            .story-article{
+                position: relative;
+
+                img{
+                    position: absolute;
+                    right: 72%;
+                    top: 12rem;
+                    width: 31%;
+                }
+                h3{
+                    padding-left:18.75rem;
+                }
+                p{
+                    margin-left: 17rem;
+                    padding-left: 3rem;
+                }
+            }
+        }
+    }
+}
+@media(min-width: 1220px){
+    .page-id-24{
+        .our-story-wrapper{
+            .story-article{
+                img{
+                    width: 37%;
+                }
+            }
+        }
+    }
+}

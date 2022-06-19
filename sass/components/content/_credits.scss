@@ -1,0 +1,15 @@
+.page-id-483{
+    #primary{
+        min-height: 65vh;
+        margin: 0 1rem;
+        @media(min-width:$breakpoint-mobile){
+            min-height: 70vh;
+        }
+        @media(min-width:$breakpoint-desktop){
+            min-height: 77vh;
+        }
+        @media(min-width: 2000px){
+            min-height: 82vh;
+        }
+    }
+}

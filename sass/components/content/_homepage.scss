@@ -1,0 +1,227 @@
+
+// BOOK NOW button background color
+.page-id-22 .wp-block-button__link {
+    background-color: $color__1;
+    @media(min-width: $breakpoint-tablet){
+        padding: 1rem 4rem;
+    }
+    @media(min-width: $breakpoint-desktop){
+        font-size: 1.4rem;
+        padding: 1rem 6rem;
+    }
+
+}
+
+
+// First Image
+.page-id-22 .site-main .homepage-cabins-introduction img {
+    padding-top: 2rem;
+    @media(min-width: $breakpoint-mobile){
+        padding-top: 4rem;
+    }
+    @media(min-width: $breakpoint-desktop){
+        width: 50%;
+    }
+}
+
+@media(min-width: $breakpoint-desktop){
+    .page-id-22 .site-main .homepage-cabins-introduction {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        width: 90%;
+        img{
+            width: 50%;
+        }
+    }
+
+    .page-id-22 .site-main .homepage-cabins-intro-texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .page-id-22 .site-main .home-feature-list-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+// Introduction paragraph padding
+.page-id-22 .site-main p{
+    padding: 0 1rem;
+    @media(min-width: $breakpoint-mobile){
+        padding: 0 2rem;
+    }
+    @media(min-width: $breakpoint-desktop){
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+}
+
+// Feature list margin
+.page-id-22 .site-main .feature-lists{
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+ 
+}
+@media(min-width: $breakpoint-mobile){
+    .page-id-22 .site-main .feature-lists{
+        columns: 2;
+        width: 70%;
+        padding-left: 3rem;
+    }
+}
+
+// Link to cabins page
+.page-id-22 .btn-to-cabins-page {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid $color__2;
+    border-radius: 10px;
+    background-color: $color__2; 
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: 0.5s;
+    &:hover{
+        background-color: $color__1;
+        color: $color__6;
+        transition: 0.5s;
+    }
+    @media(min-width: $breakpoint-mobile){
+        width: 70%;
+        margin: 1rem auto;
+        margin-bottom: 5rem;
+    }
+    @media(min-width: $breakpoint-desktop){
+        margin-bottom: 0;
+        padding: 0.5rem;
+        margin-top: 2rem;
+
+    }
+}
+
+// Link to Gift Certificate page
+.page-id-22 .btn-gift-certificate{
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: $color__4;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: .5s;
+    &:hover{
+        background-color: $color__5;
+        color: #1F1F1F;
+        transition: 0.5s;
+        font-size: 1.15rem;
+    }
+    @media(min-width: $breakpoint-mobile){
+        margin: 5rem auto;
+
+    }
+}
+
+
+// Locate us styling
+.page-id-22 .site-main h4 {
+    font-size: 1.5rem;
+    padding: 0 0.7rem;
+}
+
+.page-id-22 .site-main .homepage-google-map-text-container h4{
+    text-align: center;
+}
+
+.page-id-22 .site-main .location-address{
+    text-align: center;
+}
+
+.page-id-22 .site-main .btn-location-google-map {
+    text-decoration: none;
+    display: block;
+    color: black;
+    border: 1px solid $color__2;
+    border-radius: 10px;
+    background-color: $color__2; 
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: .5s;
+    &:hover{
+        background-color: $color__1;
+        color: $color__6;
+        transition: 0.5s;
+    }
+    @media(min-width: $breakpoint-mobile){
+        width: 70%;
+        margin: 1rem auto;
+        margin-bottom: 4rem;
+    }
+}
+
+
+
+// Google map 
+@media(min-width: $breakpoint-desktop){
+    .page-id-22 .site-main .acf-map {
+        width: 65%;
+        margin-left: 3rem;
+    }
+
+    .page-id-22 .site-main .homepage-google-map-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+    }
+}
+
+// Instagram
+.instagram-heading {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    @media(min-width: $breakpoint-mobile){
+        margin-left: 2rem;
+    }
+    @media(min-width: $breakpoint-tablet){
+        margin-left: 2.5rem;
+    }
+    @media(min-width: $breakpoint-desktop){
+        margin-left: 3rem;
+    }
+}
+
+#sbi_images {
+    div.sbi_item:nth-last-child(1),
+    div.sbi_item:nth-last-child(2),
+    div.sbi_item:nth-last-child(3),
+    div.sbi_item:nth-last-child(4) {
+        a {
+            display: none;
+            @media(min-width: 481px){
+                display: block;
+            }
+        }
+    }
+}
+
+body > main > .instagram-feed-container > #sbi_load > a.sbi_load_btn {
+    display: none;
+    @media(min-width: 481px){
+        display: inline-block;
+    }
+}

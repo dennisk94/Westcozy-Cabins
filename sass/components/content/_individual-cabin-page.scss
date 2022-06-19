@@ -1,0 +1,342 @@
+body.single-product {
+
+    main {
+        margin-top: -40px;
+        // general list styling
+        ul {
+            margin-left: 0;
+        }
+
+        // general margin styling (excluding banner)
+        div.product > *:not(section.cabin-banner) {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            max-width: 30rem;
+        }
+
+        // hide banner <a> tag
+        div.product {
+            .cabin-banner {
+                .woocommerce-product-gallery__image {
+                    a {
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+
+        // hide info tabs
+        ul.wc-tabs {
+            display: none;
+        }
+
+        // display info
+        div#tab-accommodation_booking_time {
+            display: block !important;
+        }
+
+        // calendar styling
+        form {
+            max-width: 30rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            .wc-bookings-booking-cost{
+                width: 100%;
+                margin-left: 0;
+            }
+        
+            div.wc-bookings-booking-form {
+                border: none;
+                padding: 0;
+
+                fieldset.wc-bookings-date-picker {
+                    visibility: collapse;
+                    font-size: 0;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+
+                    div.picker {
+                        visibility: visible;
+                        display: block !important; // permanently display calendar
+
+                        div.ui-datepicker {
+                            font-size: 1rem;
+                            box-shadow: none;
+
+                            // calendar header (arrows, month, year)
+                            div.ui-datepicker-header {
+                                position: relative;
+                                background-image: none;
+                                background-color: black;
+                                border-radius: 0;
+
+                                a.ui-datepicker-prev,
+                                a.ui-datepicker-next {
+                                    position: absolute;
+                                    background: none;
+                                    display: flex;
+                                    justify-content: space-around;
+                                    align-content: space-around;
+                                    width: 3rem;
+
+                                    span {
+                                        background-image: none;
+                                        font-size: 2rem;
+                                        margin: 0;
+                                        line-height: 2.25rem;
+                                        color: white;
+                                    }
+                                }
+
+                                a.ui-datepicker-prev:hover,
+                                a.ui-datepicker-next:hover {
+                                    span {
+                                        color: grey;
+                                    }
+                                }
+
+                                a.ui-datepicker-next {
+                                    right: 0;
+                                }
+
+                                div.ui-datepicker-title {
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                            }
+
+                            // calendar
+                            table {
+                                border-collapse: collapse;
+                                table-layout: fixed ;
+
+                                // days of the week  (S, M, T, W, T, F, S)
+                                thead {
+                                    border: 1px solid lightgrey;
+                                    tr {
+                                        th {
+                                            padding: 1rem 0;
+
+                                            span {
+                                                color: black;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // dates
+                                tbody {
+                                    tr {
+                                        height: 3rem;
+
+                                        // date
+                                        td {
+                                            text-align: center;
+                                            border: 1px solid lightgrey;
+
+                                            a {
+                                                height: 3rem;
+                                                display: block;
+                                                padding: 1rem 0;
+                                                text-decoration: none;
+                                            }
+        
+                                            span {
+                                                height: 3rem;
+                                                display: block;
+                                                padding: 1rem 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    span.label {
+                        display: none;
+                    }
+
+                    div.wc-bookings-date-picker-date-fields {
+                        display: none;
+                    }
+                }
+            }
+
+            button {
+                background-color: $color__1;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s;
+                &:hover{
+                    background-color: $color__2;
+                    color: $color__6
+                }
+            }
+        }
+
+        // hide product categories and tags
+        div.product_meta {
+            display: none;
+        }
+
+        // gallery styling
+        section.cabin-gallery {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        // other cabins styling ("Check out our other cabins!")
+        .related.products {
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            ul.products {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                
+                & > li {
+                    list-style: none;
+
+                    article {
+                        margin: 0 0 2rem;
+                        padding-top: 0;
+
+                        div {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+
+            // general margin styling (excluding banner)
+            div.product > *:not(section.cabin-banner) {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                padding-left: 0;
+                padding-right: 0;
+                max-width: none;
+            }
+
+            // gallery styling
+            section.cabin-gallery {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+    
+                a {
+                    width: calc(50vw - 2.5rem);
+                    img {
+                        width: 100%;
+                        height: calc(50vw - 2.5rem);
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            // other cabins styling ("Check out our other cabins!")
+            .related.products {
+                ul.products {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    & > li {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+
+            div.summary {
+                max-width: 40rem !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            // other cabins styling ("Check out our other cabins!")
+
+            .related.products {
+                ul.products {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    & > li {
+                        width: 30%;
+                    }
+                }
+            }
+
+            // gallery styling
+            div.cabin-gft {
+                display: flex;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                max-width: 80rem;
+
+        
+                section.cabin-gallery {
+                    width: 70%;
+                    margin-left: 2rem;
+                    align-content: flex-start;
+        
+                    a {
+                        width: calc(50% - 2.5rem);
+
+                        img {
+                            width: 100%;
+                            height: 15rem;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                div.cabin-ft {
+                    width: 30%;
+                }
+            }
+        }
+
+        // gift certificate
+        #product-118 {
+
+            div.summary {
+                & > p.price,
+                & > br {
+                    display: none;
+                }
+
+                form.cart {
+                    margin: 0;
+
+                    div.quantity {
+                        display: none;
+                    }
+
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+
+            div.cabin-gft {
+                display: none;
+            }
+        }
+    }
+}

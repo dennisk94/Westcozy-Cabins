@@ -1,0 +1,174 @@
+.main-navigation {
+	display: block;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		@media(min-width: $breakpoint-desktop){
+			transition: .5s;
+			&:hover{
+				box-shadow:
+					1px 1px $color__5,
+					2px 2px $color__5,
+					3px 3px $color__5;
+				transition: 0.5s;
+			}
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		text-decoration: underline;
+		text-decoration-color: $color__5;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+	.main-navigation{
+		width: initial;
+	}
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+	#masthead{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+#masthead{
+	background-color: $color__1;
+	
+	#primary-menu{
+		text-align: center;
+		position: absolute;
+		top: 4rem;
+		z-index: 99999;
+		background-color: $color__1;
+		width: 100%;
+		a{
+			padding: 0.7rem;
+		}
+	}
+	.site-branding{
+		max-width: 8rem;
+		padding: .5rem;
+	}
+	.sub-menu{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.menu-toggle {
+	position: absolute;
+	right: 0;
+	top:0.7rem;
+	background: transparent;
+	color: $color__1;
+	border: none;
+	path{
+		fill:$color__5;
+	}
+}
+
+@media(min-width: $breakpoint-mobile){
+	#masthead{
+		#primary-menu{
+			position: initial;
+			top: initial;
+			padding: 0 1rem;
+		}
+	}
+}
